@@ -123,7 +123,7 @@ body::before {
 .central-section .blue-area p span {
   font-weight: bold;
 }
-.central-section .form-section {
+.central-section .form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,40 +134,40 @@ body::before {
   width: 327px;
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
   border-radius: 10px;
+  padding-top: 20px;
 }
 @media only screen and (min-width: 1440px) {
-  .central-section .form-section {
+  .central-section .form {
     width: 540px;
     min-height: 474px;
     height: 100%;
-    padding-top: 20px;
   }
 }
-.central-section .form-section .form-elements {
+.central-section .form .form-elements {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
 }
 @media only screen and (min-width: 1440px) {
-  .central-section .form-section .form-elements {
+  .central-section .form .form-elements {
     margin-bottom: 20px;
   }
 }
-.central-section .form-section .form-elements input,
-.central-section .form-section .form-elements button {
+.central-section .form .form-elements input,
+.central-section .form .form-elements button {
   width: 279px;
   height: 56px;
   box-sizing: border-box;
   border-radius: 5px;
 }
 @media only screen and (min-width: 1440px) {
-  .central-section .form-section .form-elements input,
-.central-section .form-section .form-elements button {
+  .central-section .form .form-elements input,
+.central-section .form .form-elements button {
     width: 460px;
   }
 }
-.central-section .form-section .form-elements input {
+.central-section .form .form-elements input {
   border: 1px solid #dedede;
   padding-left: 19.41px;
   font-family: "Poppins", sans-serif;
@@ -180,16 +180,19 @@ body::before {
   opacity: 0.75;
   justify-self: flex-end;
 }
-.central-section .form-section .form-elements input:focus {
+.central-section .form .form-elements input:focus {
   outline: none;
   border: 1px solid #5f54a6;
   padding-left: 19.41px;
   opacity: none;
 }
-.central-section .form-section .form-elements input:focus::placeholder {
+.central-section .form .form-elements input:focus::placeholder {
   color: transparent;
 }
-.central-section .form-section .form-elements button {
+.central-section .form .form-elements .input-error {
+  border: 2px solid #ff7a7a;
+}
+.central-section .form .form-elements button {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -203,14 +206,14 @@ body::before {
   border: none;
   margin-bottom: 8px;
 }
-.central-section .form-section .form-elements button:hover {
+.central-section .form .form-elements button:hover {
   background: #78e2b4;
   cursor: pointer;
 }
-.central-section .form-section .form-elements button:hover:active {
+.central-section .form .form-elements button:hover:active {
   background: #38cc8c;
 }
-.central-section .form-section .form-elements p {
+.central-section .form .form-elements p {
   text-align: center;
   font-size: 11px;
   line-height: 21px;
@@ -218,24 +221,26 @@ body::before {
   font-weight: 500;
   width: 249px;
   color: #b9b6d3;
+  align-self: center;
 }
 @media only screen and (min-width: 1440px) {
-  .central-section .form-section .form-elements p {
+  .central-section .form .form-elements p {
     width: 100%;
   }
 }
-.central-section .form-section .form-elements p span {
+.central-section .form .form-elements p span {
   color: #ff7a7a;
   font-weight: 700;
 }
-.central-section .form-section .form-elements .error-icon {
+.central-section .form .form-elements .hidden {
   display: none;
+}
+.central-section .form .form-elements .error-icon {
   position: absolute;
   right: 20px;
   top: 16px;
 }
-.central-section .form-section .form-elements .error-text {
-  display: none;
+.central-section .form .form-elements .error-text {
   right: 0;
   top: 0;
   font-size: 11px;

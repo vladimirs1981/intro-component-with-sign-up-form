@@ -15,7 +15,7 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="style/style.css" />
+		<link rel="stylesheet" href="./assets/style/style.css" />
 		<title>Intro component with sign up form</title>
 	</head>
 	<body>
@@ -31,69 +31,59 @@
 			<article class="blue-area">
 				<p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
 			</article>
-			<form id="form" class="form-section" action="">
+			<form class="form" action="">
 				<div class="form-elements">
-					<input class = "input-error" type="text" id="fname" name=fname"
+					<input class = "input" type="text" id="fname" name=fname"
 					placeholder="First Name">
-					<small id="fname-error-text" class="error-text"
-						>First Name cannot be empty</small
-					>
+					<span class="error-text"></span>
 					<img
-						id="fname-error-icon"
-						src="./images/icon-error.svg"
+						src="./assets/images/icon-error.svg"
 						alt="error icon"
 						class="error-icon hidden"
 					/>
 				</div>
 				<div class="form-elements">
 					<input
-						class="input-error"
+						class="input"
 						type="text"
 						id="lname"
 						name="lname"
 						placeholder="Last Name"
 					/>
-					<small id="lname-error-text" id="email-error" class="error-text"
-						>Last Name cannot be empty</small
-					>
+					<span class="error-text"></span>
 					<img
 						id="lname-error-icon"
-						src="./images/icon-error.svg"
+						src="./assets/images/icon-error.svg"
 						alt="error icon"
 						class="error-icon hidden"
 					/>
 				</div>
 				<div class="form-elements">
 					<input
-						class="input-error"
+						class="input"
 						type="email"
 						name="email"
 						id="email"
 						placeholder="Email Address"
 					/>
-					<small id="email-error-text" class="error-text"
-						>Email cannot be empty</small
-					>
+					<span class="error-text"></span>
 					<img
-						id="email-error-icon"
-						src="./images/icon-error.svg"
+						src="./assets/images/icon-error.svg"
 						alt="error icon"
 						class="error-icon hidden"
 					/>
 				</div>
 				<div class="form-elements">
 					<input
+						class="input"
 						type="password"
 						name="password"
 						id="password"
 						placeholder="Password"
 					/>
-					<small id="password-error-text" class="error-text"
-						>Password cannot be empty</small
-					>
+					<span class="error-text"></span>
 					<img
-						id="password-error-icon"
-						src="./images/icon-error.svg"
+						src="./assets/images/icon-error.svg"
 						alt="error icon"
 						class="error-icon hidden"
 					/>
@@ -107,11 +97,6 @@
 				</div>
 			</form>
 		</section>
-		<script
-			src="https://code.jquery.com/jquery-3.6.0.min.js"
-			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-			crossorigin="anonymous"
-		></script>
 		<script src="./main.js"></script>
 	</body>
 </html>
