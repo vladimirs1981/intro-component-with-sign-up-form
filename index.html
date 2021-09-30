@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style/style.css" />
+		<title>Intro component with sign up form</title>
+	</head>
+	<body>
+		<article class="up-text">
+			<h1>Learn to code by watching others</h1>
+			<p>
+				See how experienced developers solve problems in real-time. Watching
+				scripted tutorials is great, but understanding how developers think is
+				invaluable.
+			</p>
+		</article>
+		<section class="central-section">
+			<article class="blue-area">
+				<p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+			</article>
+			<form id="form" class="form-section" action="">
+				<div class="form-elements">
+					<input class = "input-error" type="text" id="fname" name=fname"
+					placeholder="First Name">
+					<small id="fname-error-text" class="error-text"
+						>First Name cannot be empty</small
+					>
+					<img
+						id="fname-error-icon"
+						src="./images/icon-error.svg"
+						alt="error icon"
+						class="error-icon hidden"
+					/>
+				</div>
+				<div class="form-elements">
+					<input
+						class="input-error"
+						type="text"
+						id="lname"
+						name="lname"
+						placeholder="Last Name"
+					/>
+					<small id="lname-error-text" id="email-error" class="error-text"
+						>Last Name cannot be empty</small
+					>
+					<img
+						id="lname-error-icon"
+						src="./images/icon-error.svg"
+						alt="error icon"
+						class="error-icon hidden"
+					/>
+				</div>
+				<div class="form-elements">
+					<input
+						class="input-error"
+						type="email"
+						name="email"
+						id="email"
+						placeholder="Email Address"
+					/>
+					<small id="email-error-text" class="error-text"
+						>Email cannot be empty</small
+					>
+					<img
+						id="email-error-icon"
+						src="./images/icon-error.svg"
+						alt="error icon"
+						class="error-icon hidden"
+					/>
+				</div>
+				<div class="form-elements">
+					<input
+						class="input-error"
+						type="password"
+						name="password"
+						id="password"
+						placeholder="Password"
+					/>
+					<small id="password-error-text" class="error-text"
+						>Password cannot be empty</small
+					>
+					<img
+						id="password-error-icon"
+						src="./images/icon-error.svg"
+						alt="error icon"
+						class="error-icon hidden"
+					/>
+				</div>
+				<div class="form-elements">
+					<button id="submit" type="submit">Claim your free trial</button>
+					<p>
+						By clicking the button, you are agreeing to our
+						<span>Terms and Services</span>
+					</p>
+				</div>
+			</form>
+		</section>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script src="./main.js"></script>
+	</body>
+</html>

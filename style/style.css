@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background: #ff7a7a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 1440px) {
+  body {
+    flex-direction: row;
+  }
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(../images/bg-intro-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1440px) {
+  body::before {
+    background-image: url(../images/bg-intro-desktop.png);
+    background-size: cover;
+  }
+}
+
+.up-text {
+  margin-top: 88px;
+  margin-left: 24px;
+  margin-bottom: 64px;
+  color: #ffffff;
+  text-align: center;
+  z-index: 1;
+}
+@media only screen and (min-width: 1440px) {
+  .up-text {
+    margin: 0;
+    text-align: left;
+    width: 525px;
+    height: 220px;
+    justify-self: flex-start;
+    margin-left: 165px;
+  }
+}
+.up-text h1 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+@media only screen and (min-width: 1440px) {
+  .up-text h1 {
+    margin-bottom: 43px;
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: -0.52px;
+  }
+}
+.up-text p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  width: 327px;
+  font-style: normal;
+}
+@media only screen and (min-width: 1440px) {
+  .up-text p {
+    width: 100%;
+  }
+}
+
+.central-section {
+  z-index: 1;
+}
+@media only screen and (min-width: 1440px) {
+  .central-section {
+    margin-left: 57px;
+  }
+}
+.central-section .blue-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 327px;
+  height: 88px;
+  text-align: center;
+  background-color: #6055a5;
+  color: #ffffff;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  margin-bottom: 24px;
+}
+@media only screen and (min-width: 1440px) {
+  .central-section .blue-area {
+    width: 540px;
+    height: 60px;
+  }
+}
+.central-section .blue-area p {
+  font-size: 15px;
+  line-height: 26px;
+  width: 194px;
+  letter-spacing: 0.27px;
+}
+@media only screen and (min-width: 1440px) {
+  .central-section .blue-area p {
+    width: 100%;
+  }
+}
+.central-section .blue-area p span {
+  font-weight: bold;
+}
+.central-section .form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  z-index: 1;
+  height: 442px;
+  width: 327px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+}
+@media only screen and (min-width: 1440px) {
+  .central-section .form-section {
+    width: 540px;
+    min-height: 474px;
+    height: 100%;
+    padding-top: 20px;
+  }
+}
+.central-section .form-section .form-elements {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+@media only screen and (min-width: 1440px) {
+  .central-section .form-section .form-elements {
+    margin-bottom: 20px;
+  }
+}
+.central-section .form-section .form-elements input,
+.central-section .form-section .form-elements button {
+  width: 279px;
+  height: 56px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+@media only screen and (min-width: 1440px) {
+  .central-section .form-section .form-elements input,
+.central-section .form-section .form-elements button {
+    width: 460px;
+  }
+}
+.central-section .form-section .form-elements input {
+  border: 1px solid #dedede;
+  padding-left: 19.41px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  color: #3e3c49;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  justify-self: flex-end;
+}
+.central-section .form-section .form-elements input:focus {
+  outline: none;
+  border: 1px solid #5f54a6;
+  padding-left: 19.41px;
+  opacity: none;
+}
+.central-section .form-section .form-elements input:focus::placeholder {
+  color: transparent;
+}
+.central-section .form-section .form-elements button {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  background: #38cc8c;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  margin-bottom: 8px;
+}
+.central-section .form-section .form-elements button:hover {
+  background: #78e2b4;
+  cursor: pointer;
+}
+.central-section .form-section .form-elements button:hover:active {
+  background: #38cc8c;
+}
+.central-section .form-section .form-elements p {
+  text-align: center;
+  font-size: 11px;
+  line-height: 21px;
+  font-style: normal;
+  font-weight: 500;
+  width: 249px;
+  color: #b9b6d3;
+}
+@media only screen and (min-width: 1440px) {
+  .central-section .form-section .form-elements p {
+    width: 100%;
+  }
+}
+.central-section .form-section .form-elements p span {
+  color: #ff7a7a;
+  font-weight: 700;
+}
+.central-section .form-section .form-elements .error-icon {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+}
+.central-section .form-section .form-elements .error-text {
+  display: none;
+  right: 0;
+  top: 0;
+  font-size: 11px;
+  color: #ff7a7a;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: right;
+}
+
+/*# sourceMappingURL=style.css.map */
