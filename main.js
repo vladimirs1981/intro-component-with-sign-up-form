@@ -25,7 +25,6 @@ class FormValidator {
 		let self = this
 		this.fields.forEach((field) => {
 			const input = document.querySelector(`#${field}`)
-
 			input.addEventListener('input', (event) => {
 				self.validateFields(input)
 			})
@@ -38,6 +37,15 @@ class FormValidator {
 			this.setStatus(field, `${field.placeholder} cannot be blank`, 'error')
 		} else {
 			this.setStatus(field, null, 'success')
+			//Check First Name and Last Name Format
+			if (field.id === 'fname' || field.id === 'lname') {
+				const re = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i
+				if (re.test(field.value)) {
+					this.setStatus(field, null, 'success')
+				} else {
+					this.setStatus(field, `Invalid ${field.placeholder} format`, 'error')
+				}
+			}
 			// Check for valid email
 			if (field.type === 'email') {
 				const re = /\S+@\S+\.\S+/
@@ -45,6 +53,19 @@ class FormValidator {
 					this.setStatus(field, null, 'success')
 				} else {
 					this.setStatus(field, 'Looks like this is not an email', 'error')
+				}
+			}
+			//Check password format
+			if (field.id === 'password') {
+				const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/
+				if (re.test(field.value)) {
+					this.setStatus(field, null, 'success')
+				} else {
+					this.setStatus(
+						field,
+						'One num, one lower & upper char, min 8 chars',
+						'error'
+					)
 				}
 			}
 		}
