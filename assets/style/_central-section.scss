@@ -1,0 +1,178 @@
+@use '_variables' as *;
+
+.central-section {
+	z-index: 1;
+
+	@media only screen and (min-width: 1440px) {
+		margin-left: 57px;
+	}
+
+	.blue-area {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 327px;
+		height: 88px;
+		text-align: center;
+		background-color: $sectionBlue;
+		color: $textWhite;
+		z-index: 1;
+		border-radius: 10px;
+		box-shadow: 0px 8px 0px $formShadowColor;
+		margin-bottom: 24px;
+
+		@media only screen and (min-width: 1440px) {
+			width: 540px;
+			height: 60px;
+		}
+
+		p {
+			font-size: 15px;
+			line-height: 26px;
+			width: 194px;
+			letter-spacing: 0.27px;
+
+			@media only screen and (min-width: 1440px) {
+				width: 100%;
+			}
+
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: $textWhite;
+		z-index: 1;
+		min-height: 442px;
+		height: 100%;
+		width: 327px;
+		box-shadow: 0px 8px 0px $formShadowColor;
+		border-radius: 10px;
+		padding-top: 20px;
+
+		@media only screen and (min-width: 1440px) {
+			width: 540px;
+			min-height: 474px;
+			height: 100%;
+		}
+
+		.form-elements {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 16px;
+
+			@media only screen and (min-width: 1440px) {
+				margin-bottom: 20px;
+			}
+
+			input,
+			button {
+				width: 279px;
+				height: 56px;
+				box-sizing: border-box;
+				border-radius: 5px;
+
+				@media only screen and (min-width: 1440px) {
+					width: 460px;
+				}
+			}
+
+			input {
+				border: 1px solid $inputBorderColor;
+				padding-left: 19.41px;
+				font-family: $primaryFont;
+				font-size: 14px;
+				line-height: 26px;
+				font-weight: 600;
+				letter-spacing: 0.25px;
+				color: $darkBlue;
+				mix-blend-mode: normal;
+				opacity: 0.75;
+				justify-self: flex-end;
+				&:focus {
+					outline: none;
+					border: 1px solid $focusColorBlue;
+					padding-left: 19.41px;
+					opacity: none;
+					&::placeholder {
+						color: transparent;
+					}
+				}
+			}
+
+			.input-error {
+				border: 2px solid $primaryRed;
+			}
+
+			button {
+				font-family: Poppins;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 15px;
+				line-height: 26px;
+				letter-spacing: 1px;
+				box-shadow: inset 0px -4px 0px $buttonShadow;
+				background: $buttonGreen;
+				text-transform: uppercase;
+				color: $textWhite;
+				border: none;
+				margin-bottom: 8px;
+				&:hover {
+					background: $buttonHover;
+					cursor: pointer;
+					&:active {
+						background: $buttonGreen;
+					}
+				}
+			}
+
+			p {
+				text-align: center;
+				font-size: 11px;
+				line-height: 21px;
+				font-style: normal;
+				font-weight: 500;
+				width: 249px;
+				color: $grayishBlue;
+				align-self: center;
+
+				@media only screen and (min-width: 1440px) {
+					width: 100%;
+				}
+
+				span {
+					color: $primaryRed;
+					font-weight: 700;
+				}
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			.error-icon {
+				position: absolute;
+				right: 20px;
+				top: 16px;
+			}
+
+			.error-text {
+				right: 0;
+				top: 0;
+				font-size: 11px;
+				color: $primaryRed;
+				font-style: italic;
+				font-weight: 500;
+				line-height: 16px;
+				text-align: right;
+			}
+		}
+	}
+}
